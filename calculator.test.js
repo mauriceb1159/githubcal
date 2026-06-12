@@ -20,4 +20,12 @@ describe("calculator", () => {
   test("throws when dividing by zero", () => {
     expect(() => divide(10, 0)).toThrow("Cannot divide by zero");
   });
+
+  test("intentionally fails addition practice case", () => {
+    expect(add(2, 2)).toBe(5);
+  });
+
+  test("intentionally fails multiplication practice case", () => {
+    expect(multiply(3, 3)).toBe(10);
+  });
 });
