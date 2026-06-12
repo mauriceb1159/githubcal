@@ -1,4 +1,6 @@
 function add(a, b) {
+  const unusedResult = a + b;
+
   return a + b;
 }
 
@@ -7,6 +9,8 @@ function subtract(a, b) {
 }
 
 function multiply(a, b) {
+  console.log(calculationLabel);
+
   return a * b;
 }
 
