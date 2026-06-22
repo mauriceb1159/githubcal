@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="calculator">
+      <h1>Calculator Project</h1>
+
+      <label for="number-one">Number 1</label>
+      <input id="number-one" type="number" placeholder="Enter first number">
+
+      <label for="number-two">Number 2</label>
+      <input id="number-two" type="number" placeholder="Enter second number">
+
+      <div class="button-group">
+        <button type="button" onclick="calculate('add')">Add</button>
+        <button type="button" onclick="calculate('subtract')">Subtract</button>
+        <button type="button" onclick="calculate('multiply')">Multiply</button>
+        <button type="button" onclick="calculate('divide')">Divide</button>
+      </div>
+
+      <p class="result">Result: <span id="result">0</span></p>
+    </main>
+
+    <script>
+      function calculate(operation) {
+        const firstNumber = Number(document.getElementById("number-one").value);
+        const secondNumber = Number(document.getElementById("number-two").value);
+        const resultElement = document.getElementById("result");
+
+        if (operation === "add") {
+          resultElement.textContent = firstNumber + secondNumber;
+        } else if (operation === "subtract") {
+          resultElement.textContent = firstNumber - secondNumber;
+        } else if (operation === "multiply") {
+          resultElement.textContent = firstNumber * secondNumber;
+        } else if (secondNumber === 0) {
+          resultElement.textContent = "Cannot divide by zero";
+        } else {
+          resultElement.textContent = firstNumber / secondNumber;
+        }
+      }
+    </script>
+  </body>
+</html>

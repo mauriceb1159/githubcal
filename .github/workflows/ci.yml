@@ -27,6 +27,18 @@ jobs:
               with:
                 node-version: 20
 
+            - name: Show Node Version
+              run: node --version
+
+            - name: Show NPM Version
+              run: npm --version
+
+            - name: Show Event
+              run: echo "${{ github.event_name }}"
+
+            - name: Show Date
+              run: date
+
             - name: Install Dependencies
               run: npm install
 
@@ -50,3 +62,10 @@ jobs:
         steps:
             - name: Generate Report
               run: echo "Generating Report"
+
+    hello:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Print Message
+              run: echo "Hello Students"

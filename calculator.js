@@ -1,16 +1,5 @@
-/*
 function add(a, b) {
   return a + b;
-}
-*/
-
-// quality error made purposely
-function add(a, b) {
-  let result = a + b;
-
-  const unused = 100; // variable defined but not used. This will fail the linting process.
-
-  return result;
 }
 
 function subtract(a, b) {
@@ -18,7 +7,7 @@ function subtract(a, b) {
 }
 
 function multiply(a, b) {
-  return a * b; // NEW FEATURE
+  return a * b;
 }
 
 function divide(a, b) {
@@ -29,9 +18,19 @@ function divide(a, b) {
   return a / b;
 }
 
+function square(a) {
+  return a * a;
+}
+
+function cube(a) {
+  return a * a * a;
+}
+
 module.exports = {
   add,
   subtract,
   multiply,
-  divide
+  divide,
+  square,
+  cube
 };
